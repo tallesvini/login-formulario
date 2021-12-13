@@ -1,6 +1,6 @@
 # Olá! 😜 
 
-## Tela de login baseada em alguns exemplos do cotidiano!
+## Tela de cadastro baseada em alguns exemplos do cotidiano!
 
 ### Nesse projeto foi usado CSS, HTML, JS. 😉
 #### 📌 Usados também a biblioteca jQuery e a API ViaCEP para localizar os endereços.
@@ -14,3 +14,6 @@
 #### ✅ Caso haja dúvida sobre, entre em contato comigo pelo <a href="https://www.instagram.com/tallesvn_/" target="_blank">Instagram</a>.
 
 📬 Contato profissional: tallesvinicius.contato@gmail.com
+.
+.
+.

@@ -1,9 +1,9 @@
 // conferir senhas
 $('#senha2').on('focusout', e => {
-    let a = $('#senha1').val()
-    let b = $('#senha2').val()
+    let x = $('#senha1').val()
+    let y = $('#senha2').val()
 
-    if(a != b | b.length == 0) {
+    if(x != y | y.length == 0) {
         $('#senha2').css('border', 'solid 2px red')
             $('#erroSenha').css('display', 'block')
             $('#acertoSenha').css('display', 'none')
@@ -21,13 +21,13 @@ $('#cep').on('focusout', e => {
     if(cep.length == 8) {
         let url = `https://viacep.com.br/ws/${cep}/json/`
 
-        fetch(url).then(function(response) { // fetch -> PARA CONSUMIR A API | then -> ESPERA UMA FUNÇÃO o parametro RESPONSE
-            response.json().then(mostrarEndereço) // pega o response, o json e passa o THEN para converter para um objeto
+        fetch(url).then(function(response) { 
+            response.json().then(mostrarEndereço)
         }) 
     } else if(cep.length == 0 | cep.length > 8) {
         alert('Por favor digite o CEP!')
     } else {
-        $('#cep').append('<p>correto</p>')
+        alert('CEP inválido!')
     }
 })
 

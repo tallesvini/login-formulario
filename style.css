@@ -126,6 +126,15 @@ a, h1, h3 {
     display: none;
 }
 
+.final h6 {
+    position: absolute;
+    top: 98vh;
+    left: 50%;
+    transform: translate(-50%);
+    color: #ffffff;
+    font-weight: lighter;
+}
+
 /*responsividade*/
 @media(max-width: 1200px) {
     .conectado {
@@ -147,7 +156,7 @@ a, h1, h3 {
     .principal {
         top: 4vh;
         width: 90vw;
-        height: 600px;
+        height: 650px;
     }
 
     .titulo {
@@ -194,5 +203,10 @@ a, h1, h3 {
         position: relative;
         top: 13vh;
         left: 20px;
+    }
+
+    .final h6 {
+        position: absolute;
+        font-size: .5em;
     }
 }
