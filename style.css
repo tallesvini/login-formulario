@@ -147,7 +147,7 @@ a, h1, h3 {
     .principal {
         top: 4vh;
         width: 90vw;
-        height: 90vh;
+        height: 600px;
     }
 
     .titulo {
@@ -164,18 +164,24 @@ a, h1, h3 {
     }
 
     .conectado {
-        top: 61vh;
+        position: relative;
+        top: 17vh;
         left: 10vw;
         font-size: .7em;
     }
 
     #botao {
-        top: 66vh;
+        position: relative;
+        top: 18vh;
         width: 60vw;
     }
 
-    .conta {
-        font-size: .9em;
+    .conta p {
+        position: relative;
+        top: 20vh;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: .8em;
     }
 
     #erroSenha {

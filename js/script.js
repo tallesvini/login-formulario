@@ -3,7 +3,7 @@ $('#senha2').on('focusout', e => {
     let a = $('#senha1').val()
     let b = $('#senha2').val()
 
-    if(a != b) {
+    if(a != b | b.length == 0) {
         $('#senha2').css('border', 'solid 2px red')
             $('#erroSenha').css('display', 'block')
             $('#acertoSenha').css('display', 'none')
