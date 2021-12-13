@@ -157,6 +157,7 @@ a, h1, h3 {
         top: 4vh;
         width: 90vw;
         height: 630px;
+        overflow-x: hidden;
     }
 
     .titulo {
