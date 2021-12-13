@@ -156,7 +156,7 @@ a, h1, h3 {
     .principal {
         top: 4vh;
         width: 90vw;
-        height: 650px;
+        height: 630px;
     }
 
     .titulo {
@@ -206,7 +206,9 @@ a, h1, h3 {
     }
 
     .final h6 {
-        position: absolute;
+        position: relative;
+        top: 15vh;
         font-size: .5em;
+        text-align: center;
     }
 }
