@@ -185,10 +185,14 @@ a, h1, h3 {
     }
 
     #erroSenha {
+        position: relative;
+        top: 13vh;
         left: 20px;
     }
 
     #acertoSenha {
+        position: relative;
+        top: 13vh;
         left: 20px;
     }
 }
