@@ -4,23 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery.js"></script>
+    
     <title>Formulário</title>
 </head>
 <body>
     <div class='principal'>
-        <h1>Login</h1>
-        <input type="email" placeholder="Email ou telefone">
-        <input type="password" placeholder="Senha">
+        <h1 class="titulo">Cadastre-se</h1>
+        <div id="login">
+            <input type="email" placeholder="Email ou telefone">
+            <input id="senha1" type="password" placeholder="Senha">
+            <input id="senha2" type="password" placeholder="Confirme sua senha">
+            <div class="opcoes">
+                <p id="erroSenha">Senha incorreta</p>
+                <p id="acertoSenha">Senha correta</p>
+            </div>
+        </div>
+            <div id="enderecos">
+                <h3>Endereço</h3>
+                <input id="cep" type="number" placeholder="CEP"> <br>
+                <input id="endereco" type="text" placeholder="Endereço">
+                <input id="bairro" type="text" placeholder="Bairro"> <br>
+                <input id="cidade" type="text" placeholder="Cidade">
+                <input id="uf" type="text" placeholder="UF"> 
+            </div>
             <div class='conectado'>
                 <input type="checkbox" name="manter-conectado" id="question">
-                    <label>Mantenha-me conectado</label>
+                <label>Eu li e concordo com os termos de uso</label>
             </div>
-        <button class="botão">Sign in</button>
-        <p>Esqueceu a senha?
-            <a href="">Recupere</a>
-        </p>
+        <button id="botao">Sign up</button>
+        <div class="conta">
+            <p>Já tem conta?
+                <a href="">Conecte-se</a>
+            </p>
+        </div>
     </div>
 </body>
+    <script src="js/script.js"></script>
 </html>

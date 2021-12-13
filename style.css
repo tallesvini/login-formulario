@@ -1,21 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 body {
     font-family: 'Ubuntu', sans-serif;
     background-image: linear-gradient(to right, #741DFF , #7647bb);
-
 }
+
 .principal {
-    background-color: white;
+    background-color: #ffffff;
     box-shadow: 0 0 0.7em #371277;
-    position: absolute;
+    position: relative;
     border-radius: 15px;
-    width: 300px;
-    padding: 50px;
-    top: 50%;
+    width: 500px;
+    height: 90vh;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 5vh;
+    transform: translate(-50%);
     text-align: center;
     display: flex;
     flex-direction: column;
+}
+
+.principal h1 {
+    position: relative;
+    top: 8vh;
+}
+
+/*input login*/
+#login input {
+    position: relative;
+    top: 12vh;
+    width: 320px;
+    color: #371277;
+}
+
+/*input cep*/
+#enderecos input {
+    position: relative;
+    top: 17vh;
+    width: 145px;
+    color: #371277;
+}
+
+#enderecos h3 {
+    position: relative;
+    top:15vh;
 }
 
 input, button {
@@ -26,28 +56,133 @@ input, button {
     border-radius: 6px; 
 }
 
+textarea:focus, input:focus, select:focus {
+    outline: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+}
+
+/*termos*/
 .conectado {
     padding: 5px;
     margin: 2px;
     text-align: left;
     font-size: 14px;
     cursor: pointer;
+    position: absolute;
+    top: 63vh;
+    left: 4vw;
 }
 
-.botão {
+#botao {
     color: white;
     background-color: #9b61f8;
     cursor: pointer;
+    width: 300px;
+    position: absolute;
+    top: 68vh;
+    left: 50%;
+    transform: translate(-50%);
 }
 
-button:hover {
+#botao:hover {
     background-color: #fff;
     color: #9b61f8;
     transition: 0.2s ease-in;
 }
 
-a, h1 {
+a, h1, h3 {
     color: #741DFF;
+    text-decoration: none;
 }
 
+.conta p {
+    position: absolute;
+    top: 75vh;
+    left: 50%;
+    transform: translate(-50%);
+}
 
+/*controle de erros*/
+#erroSenha {
+    font-size: .7em;
+    color: #ff0000;
+    float: left;
+    position: absolute;
+    top: 255px;
+    left: 80px;
+    display: none;
+}
+
+#acertoSenha {
+    font-size: .7em;
+    color: #008000;
+    float: left;
+    position: absolute;
+    top: 255px;
+    left: 80px;
+    display: none;
+}
+
+/*responsividade*/
+@media(max-width: 1200px) {
+    .conectado {
+        top: 65vh;
+        left: 10vw;
+    }
+
+    #botao {
+        top: 70vh;
+    }
+
+    .conta p {
+        top: 80vh;
+    }
+}
+
+/*responsividade mobile*/
+@media(max-width: 600px) {
+    .principal {
+        top: 4vh;
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .titulo {
+        position: relative;
+        top: 2vh;
+    }
+
+    #login input {
+        width: 80vw;
+    } 
+
+    #enderecos input {
+        width: 30vw;
+    }
+
+    .conectado {
+        top: 61vh;
+        left: 10vw;
+        font-size: .7em;
+    }
+
+    #botao {
+        top: 66vh;
+        width: 60vw;
+    }
+
+    .conta {
+        font-size: .9em;
+    }
+
+    #erroSenha {
+        left: 20px;
+    }
+
+    #acertoSenha {
+        left: 20px;
+    }
+}
