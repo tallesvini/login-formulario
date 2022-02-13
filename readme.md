@@ -15,7 +15,7 @@
 
 ### Sua forma: 👇🏼
 
-![TELA DE LOGIN](https://user-images.githubusercontent.com/90796934/145740770-5e3c606c-c289-4d0e-b8c8-ee229e09f2bc.PNG)
+![TELA DE LOGIN](https://user-images.githubusercontent.com/90796934/153755125-14dd71ab-c135-4505-b463-3202640bb93b.PNG)
 
 #### ✅ Caso haja dúvida sobre, entre em contato comigo pelo <a href="https://www.instagram.com/tallesvn_/" target="_blank">Instagram</a>.
 
