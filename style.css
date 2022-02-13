@@ -2,57 +2,125 @@
     padding: 0;
     margin: 0;
 }
+
 body {
     font-family: 'Ubuntu', sans-serif;
-    background-image: linear-gradient(to right, #741DFF , #7647bb);
 }
 
+/*BACKGROUND DE FUNDO*/
+.background1 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.background2 {
+    display: none;
+}
+
+/*LAYOUT*/
 .principal {
-    background-color: #ffffff;
-    box-shadow: 0 0 0.7em #371277;
     position: relative;
-    border-radius: 15px;
-    width: 500px;
-    height: 90vh;
+    box-shadow: 0 0 2em #9397ad;
+    height: 70vh;
+    width: 60vw;
+    top: 10vh;
     left: 50%;
-    top: 5vh;
     transform: translate(-50%);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+    border-radius: 15px;
 }
 
-.principal h1 {
+/*lado esquerda*/
+.parte1 {
+    position: absolute;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    width: 30vw;
+    height: 70vh;
+    top: 0vh;
+    left: 0%;
+}
+
+.parte1 img {
+    position: absolute;
+    width: 27em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*lado direita*/
+.parte2 {
     position: relative;
-    top: 8vh;
+    border-radius: 5px;
+    width: 30vw;
+    height: 70vh;
+    left: 30vw;
+}
+
+.parte2 .back1 {
+    width: 30vw;
+    height: 70vh;
+    border-radius: 5px;
+}
+
+.parte2 .back2 {
+    display: none;
+}
+
+/*DIREITA*/
+.titulo {
+    position: absolute;
+    color: #FFFFFF;
+    left: 30%;
+    transform: translate(-50%);
+    top: 5vh;
 }
 
 /*input login*/
 #login input {
     position: relative;
-    top: 12vh;
-    width: 320px;
     color: #371277;
+    width: 19vw;
+    border-radius: 15px;
+}
+
+#login {
+    position: absolute;
+    top: 13vh;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 /*input cep*/
+#enderecos {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 #enderecos input {
     position: relative;
-    top: 17vh;
-    width: 145px;
     color: #371277;
+    border-radius: 15px;
+    top: 38vh;
+    width: 5vw;
 }
 
 #enderecos h3 {
-    position: relative;
-    top:15vh;
+    position: absolute;
+    color: #FFFFFF;
+    font-weight: lighter;
+    top: 33vh;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 input, button {
     font-family: 'Ubuntu', sans-serif;
     padding: 10px;
     margin: 3px;
-    border: 1px solid rgb(129, 129, 129);
+    border: 1px solid #818181;
     border-radius: 6px; 
 }
 
@@ -66,150 +134,213 @@ input[type=number]::-webkit-inner-spin-button {
 
 /*termos*/
 .conectado {
+    position: absolute;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: left;
     padding: 5px;
     margin: 2px;
-    text-align: left;
-    font-size: 14px;
-    cursor: pointer;
-    position: absolute;
-    top: 63vh;
-    left: 4vw;
+    font-size: 11px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 50vh;
 }
 
 #botao {
-    color: white;
-    background-color: #9b61f8;
-    cursor: pointer;
-    width: 300px;
     position: absolute;
-    top: 68vh;
+    background-color: #ffffff;
+    color: #361259;
+    border: solid 1px #361259;
+    font-weight: bolder;
+    cursor: pointer;
+    width: 8vw;
     left: 50%;
     transform: translate(-50%);
+    top: 55vh;
 }
 
 #botao:hover {
-    background-color: #fff;
-    color: #9b61f8;
-    transition: 0.2s ease-in;
+    background-color: #361259;
+    color: #ffffff;
+    transition: 0.3s ease-in;
 }
 
-a, h1, h3 {
-    color: #741DFF;
+a {
+    color: #B7AEEE;
     text-decoration: none;
 }
 
 .conta p {
     position: absolute;
-    top: 75vh;
+    color: #ffffff;
     left: 50%;
     transform: translate(-50%);
+    top: 63vh;
 }
 
 /*controle de erros*/
 #erroSenha {
-    font-size: .7em;
-    color: #ff0000;
-    float: left;
     position: absolute;
-    top: 255px;
-    left: 80px;
+    color: #ff0000;
     display: none;
+    font-size: .7em;
 }
 
 #acertoSenha {
-    font-size: .7em;
-    color: #008000;
-    float: left;
     position: absolute;
-    top: 255px;
-    left: 80px;
+    color: #008000;
     display: none;
+    font-size: .7em;
 }
 
+/*COPYRIGHT*/
 .final h6 {
     position: absolute;
+    color: #260D40;
+    font-weight: lighter;
     top: 98vh;
     left: 50%;
     transform: translate(-50%);
-    color: #ffffff;
-    font-weight: lighter;
 }
 
-/*responsividade*/
-@media(max-width: 1200px) {
-    .conectado {
-        top: 65vh;
-        left: 10vw;
+/*RESPONSIVIDADES*/
+@media (max-width: 1200px) {
+    .parte1 img {
+        width: 22em;
     }
-
-    #botao {
-        top: 70vh;
-    }
-
-    .conta p {
-        top: 80vh;
-    }
-}
-
-/*responsividade mobile*/
-@media(max-width: 600px) {
-    .principal {
-        top: 4vh;
-        width: 90vw;
-        height: 630px;
-        overflow-x: hidden;
-    }
-
-    .titulo {
-        position: relative;
-        top: 2vh;
-    }
-
-    #login input {
-        width: 80vw;
-    } 
 
     #enderecos input {
-        width: 30vw;
+        width: 4vw;
+        height: 1vh;
     }
 
     .conectado {
-        position: relative;
-        top: 17vh;
-        left: 10vw;
+        top: 49vh;
+        font-size: .5em;
+    }
+
+    .conta p, a {
+        font-size: .8em;
+    }
+}
+
+@media (max-width: 900px) {
+    .parte1 img {
+        width: 15em;
+    }
+
+    .parte2 h1 {
+        left: 12vw;
+    }
+
+    #enderecos input {
+        width: 3vw;
+        height: 1vh;
+    }
+
+    .conectado {
+        top: 49vh;
+        font-size: .6em;
+    }
+
+    .conta p, a {
         font-size: .7em;
+    }
+}
+
+/*RESPONSIVIDADE MOBILE*/
+@media(max-width: 675px) {
+    /*background de fundo*/
+    .background1 {
+        display: none;
+    }
+
+    .background2 {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+
+    /*layout*/
+    .parte1 {
+        display: none;
+    }
+    
+    .parte2 .back1{
+        width: 80vw;
+        height: 80vh;
+        border-radius: 10px;
+    }
+
+    .parte2 h1 {
+        left: 28vw;
+    }
+    
+    .principal {
+        position: relative;
+        box-shadow: none;
+        top: 8vh;
+        left: 10%; 
+    }
+
+    #login input{
+        position: relative;
+        width: 50vw;
+        height: 1.5vh;
+        left: 43%;
+    }
+
+    #enderecos input {
+        left: 45vw;
+        transform: translate(-50%);
+        width: 35vw;
+        height: .8vh;
+        margin-bottom: .4px;
+    }
+
+    #enderecos h3 {
+        left: 45vw;
+    }
+
+    .conectado {
+        top: 58vh;
+        left: 40vw;
+        width: 55vw;
+        font-size: .6em;
     }
 
     #botao {
-        position: relative;
-        top: 18vh;
-        width: 60vw;
+        top: 63vh;
+        left: 37vw;
+        width: 25vw;
     }
 
-    .conta p {
-        position: relative;
-        top: 20vh;
-        left: 50%;
-        transform: translate(-50%);
-        font-size: .8em;
+    .conta p, a {
+        font-size: .9em;
+        left: 40vw;
+        top: 71vh;
+        width: 45vw;
     }
 
+    /*controle de erros js*/
     #erroSenha {
         position: relative;
-        top: 13vh;
-        left: 20px;
+        top: 0vh;
+        left: 20vw;
     }
 
     #acertoSenha {
         position: relative;
-        top: 13vh;
-        left: 20px;
+        top: 0vh;
+        left: 20vw;
     }
 
+    /*copyright*/
     .final h6 {
         position: relative;
-        top: 15vh;
-        font-size: .5em;
         text-align: center;
+        top: 27vh;
+        font-size: .5em;
     }
 }

@@ -12,39 +12,58 @@
     <title>Formulário</title>
 </head>
 <body>
-    <div class='principal'>
-        <h1 class="titulo">Cadastre-se</h1>
-        <div id="login">
-            <input type="email" placeholder="Email ou telefone">
-            <input id="senha1" type="password" placeholder="Senha">
-            <input id="senha2" type="password" placeholder="Confirme sua senha">
-            <div class="opcoes">
-                <p id="erroSenha">Senha incorreta</p>
-                <p id="acertoSenha">Senha correta</p>
+    <!--BACKGROUND DE FUNDO-->
+    <div class="partes">
+        <img class="background1" src="anexos/imagens/back2.png">
+        <img class="background2" src="anexos/imagens/back3.png">
+        
+        <!--LAYOUT-->
+        <div class='principal'>
+            <!--lado esquerdo-->
+            <div class="parte1">
+                <img src="anexos/imagens/pic1.png">
             </div>
-        </div>
-            <div id="enderecos">
-                <h3>Endereço</h3>
-                <input id="cep" type="number" placeholder="CEP"> <br>
-                <input id="endereco" type="text" placeholder="Endereço">
-                <input id="bairro" type="text" placeholder="Bairro"> <br>
-                <input id="cidade" type="text" placeholder="Cidade">
-                <input id="uf" type="text" placeholder="UF"> 
+            <!--lado direito-->
+            <div class="parte2">
+                <h1 class="titulo">Welcome!</h1>
+                    <!--login-->
+                    <div id="login">
+                        <input type="email" placeholder="Email ou telefone"> <br>
+                        <input id="senha1" type="password" placeholder="Senha"> <br>
+                        <input id="senha2" type="password" placeholder="Confirme sua senha">
+                        <div class="opcoes">
+                            <p id="erroSenha">Senha incorreta</p>
+                            <p id="acertoSenha">Senha correta</p>
+                        </div>
+                    </div>
+                    <!--endereço-->
+                    <div id="enderecos">
+                        <h3>Endereço</h3>
+                        <input id="cep" type="number" placeholder="CEP">
+                        <input id="endereco" type="text" placeholder="Endereço"> <br>
+                        <input id="cidade" type="text" placeholder="Cidade">
+                        <input id="uf" type="text" placeholder="UF"> 
+                    </div>
+                    <!--final-->
+                    <div class='conectado'>
+                        <input type="checkbox" name="manter-conectado" id="question">
+                        <label>Eu li e concordo com os termos de uso</label>
+                    </div>
+                    <button id="botao">Sign up</button>
+                    <div class="conta">
+                        <p>Já tem conta?
+                        <a href="">Conecte-se</a>
+                    </p>
+                    <img class="back1" src="anexos/imagens/back1.png">
+                </div>
             </div>
-            <div class='conectado'>
-                <input type="checkbox" name="manter-conectado" id="question">
-                <label>Eu li e concordo com os termos de uso</label>
-            </div>
-        <button id="botao">Sign up</button>
-        <div class="conta">
-            <p>Já tem conta?
-                <a href="">Conecte-se</a>
-            </p>
         </div>
     </div>
+    <!--COPYRIGHT-->
     <footer class="final">
         <h6>Copyright 2022 TM Code - Todos os direitos reservados</h6>
     </footer>
+    
 </body>
     <script src="js/script.js"></script>
 </html>
