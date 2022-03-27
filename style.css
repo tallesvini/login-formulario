@@ -1,130 +1,87 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-/*BACKGROUND DE FUNDO*/
-.background1 {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-}
-
-.background2 {
-    display: none;
-}
-
 /*LAYOUT*/
-.principal {
-    position: relative;
-    box-shadow: 0 0 2em #9397ad;
-    height: 70vh;
-    width: 60vw;
-    top: 10vh;
-    left: 50%;
-    transform: translate(-50%);
-    border-radius: 15px;
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
 }
 
-/*lado esquerda*/
+.principal {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: 4px 3px 5px #e0e0e0;
+}
+
+/*ESQUERDA*/
 .parte1 {
-    position: absolute;
-    border-radius: 5px;
-    background-color: #FFFFFF;
-    width: 30vw;
-    height: 70vh;
-    top: 0vh;
-    left: 0%;
+    background-color: #F6F6F6;
+    border-radius: 10px 0 0 10px;
 }
 
 .parte1 img {
-    position: absolute;
-    width: 27em;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/*lado direita*/
-.parte2 {
-    position: relative;
-    border-radius: 5px;
-    width: 30vw;
-    height: 70vh;
-    left: 30vw;
-}
-
-.parte2 .back1 {
-    width: 30vw;
-    height: 70vh;
-    border-radius: 5px;
-}
-
-.parte2 .back2 {
-    display: none;
+    width: 100%;
 }
 
 /*DIREITA*/
-.titulo {
-    position: absolute;
-    color: #FFFFFF;
-    left: 30%;
-    transform: translate(-50%);
-    top: 5vh;
+.parte2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #7338F2;
+    border-radius: 0 10px 10px 0;
+}
+
+.parte2 h1 {
+    background-color: #FFFFFF;
+    color: #31188C;
+    margin: 2vh 0 5vh 0;
+    padding: 5px 10px;
 }
 
 /*input login*/
 #login input {
-    position: relative;
     color: #371277;
-    width: 19vw;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
-#login {
-    position: absolute;
-    top: 13vh;
-    left: 50%;
-    transform: translate(-50%);
+#login p {
+    color: #FFFFFF;
+    font-size: .8em;
+    margin-bottom: 5px;
 }
 
 /*input cep*/
-#enderecos {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-}
-
 #enderecos input {
-    position: relative;
     color: #371277;
-    border-radius: 15px;
-    top: 38vh;
-    width: 5vw;
+    border-radius: 10px;
 }
 
 #enderecos h3 {
-    position: absolute;
+    margin: 3vh 0 2vh 0;
     color: #FFFFFF;
     font-weight: lighter;
-    top: 33vh;
-    left: 50%;
-    transform: translate(-50%);
 }
 
 input, button {
-    font-family: 'Ubuntu', sans-serif;
     padding: 10px;
     margin: 3px;
     border: 1px solid #818181;
     border-radius: 6px; 
 }
 
-textarea:focus, input:focus, select:focus {
+textarea:focus,
+input:focus,
+select:focus {
     outline: 0;
 }
 
@@ -134,213 +91,109 @@ input[type=number]::-webkit-inner-spin-button {
 
 /*termos*/
 .conectado {
-    position: absolute;
-    color: #ffffff;
     cursor: pointer;
-    text-align: left;
+    color: #ffffff;
+    margin: 1vh 0 2vh 0;
     padding: 5px;
-    margin: 2px;
     font-size: 11px;
-    left: 50%;
-    transform: translate(-50%);
-    top: 50vh;
 }
 
 #botao {
-    position: absolute;
+    font-weight: bolder;
+    cursor: pointer;
     background-color: #ffffff;
     color: #361259;
     border: solid 1px #361259;
-    font-weight: bolder;
-    cursor: pointer;
     width: 8vw;
-    left: 50%;
-    transform: translate(-50%);
-    top: 55vh;
+    margin-bottom: 2vh;
 }
 
 #botao:hover {
-    background-color: #361259;
+    background-color: #31188C;
     color: #ffffff;
-    transition: 0.3s ease-in;
+    transition: .3s;
 }
 
-a {
-    color: #B7AEEE;
+.conta {
+    margin-bottom: 20px;
+}
+
+.conta a {
     text-decoration: none;
+    color: #B7AEEE;
 }
 
 .conta p {
-    position: absolute;
     color: #ffffff;
-    left: 50%;
-    transform: translate(-50%);
-    top: 63vh;
 }
 
 /*controle de erros*/
 #erroSenha {
-    position: absolute;
-    color: #ff0000;
     display: none;
+    color: #ff0000;
     font-size: .7em;
 }
 
 #acertoSenha {
-    position: absolute;
-    color: #008000;
     display: none;
+    color: #008000;
     font-size: .7em;
 }
 
-/*COPYRIGHT*/
-.final h6 {
-    position: absolute;
-    color: #260D40;
-    font-weight: lighter;
-    top: 98vh;
-    left: 50%;
-    transform: translate(-50%);
+/*footer*/
+.final {
+    display: flex;
+    justify-content: center;
+    color: #0A0E59;
+    font-size: .8em;
+    margin-top: 7vh;
 }
 
-/*RESPONSIVIDADES*/
-@media (max-width: 1200px) {
-    .parte1 img {
-        width: 22em;
-    }
-
-    #enderecos input {
-        width: 4vw;
-        height: 1vh;
-    }
-
-    .conectado {
-        top: 49vh;
-        font-size: .5em;
-    }
-
-    .conta p, a {
-        font-size: .8em;
-    }
-}
-
-@media (max-width: 900px) {
-    .parte1 img {
-        width: 15em;
-    }
-
-    .parte2 h1 {
-        left: 12vw;
-    }
-
-    #enderecos input {
-        width: 3vw;
-        height: 1vh;
-    }
-
-    .conectado {
-        top: 49vh;
-        font-size: .6em;
-    }
-
-    .conta p, a {
-        font-size: .7em;
+/*RESPONSIVIDADE DESKTOP 2*/
+@media(max-width: 915px) {
+    #enderecos {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 }
 
 /*RESPONSIVIDADE MOBILE*/
-@media(max-width: 675px) {
-    /*background de fundo*/
-    .background1 {
-        display: none;
+@media (max-width: 768px) {
+    .container {
+        margin-top: 5vh;
     }
-
-    .background2 {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100vh;
-    }
-
-    /*layout*/
+    
     .parte1 {
         display: none;
     }
-    
-    .parte2 .back1{
+
+    .parte2 {
         width: 80vw;
-        height: 80vh;
+        padding: 30px;
         border-radius: 10px;
     }
 
     .parte2 h1 {
-        left: 28vw;
-    }
-    
-    .principal {
-        position: relative;
-        box-shadow: none;
-        top: 8vh;
-        left: 10%; 
+        margin: 1vh 0 4vh 0;
     }
 
-    #login input{
-        position: relative;
-        width: 50vw;
-        height: 1.5vh;
-        left: 43%;
+    #login input {
+        width: 70vw;
+        margin-bottom: 2vh;
+    }
+
+    #enderecos {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     #enderecos input {
-        left: 45vw;
-        transform: translate(-50%);
-        width: 35vw;
-        height: .8vh;
-        margin-bottom: .4px;
-    }
-
-    #enderecos h3 {
-        left: 45vw;
-    }
-
-    .conectado {
-        top: 58vh;
-        left: 40vw;
-        width: 55vw;
-        font-size: .6em;
+        width: 60vw;
     }
 
     #botao {
-        top: 63vh;
-        left: 37vw;
-        width: 25vw;
-    }
-
-    .conta p, a {
-        font-size: .9em;
-        left: 40vw;
-        top: 71vh;
-        width: 45vw;
-    }
-
-    /*controle de erros js*/
-    #erroSenha {
-        position: relative;
-        top: 0vh;
-        left: 20vw;
-    }
-
-    #acertoSenha {
-        position: relative;
-        top: 0vh;
-        left: 20vw;
-    }
-
-    /*copyright*/
-    .final h6 {
-        position: relative;
-        text-align: center;
-        top: 27vh;
-        font-size: .5em;
+        width: 20vw;
     }
 }

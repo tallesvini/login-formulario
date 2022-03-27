@@ -11,31 +11,33 @@
     
     <title>Formulário</title>
 </head>
-<body>
-    <!--BACKGROUND DE FUNDO-->
-    <div class="partes">
-        <img class="background1" src="anexos/imagens/back2.png">
-        <img class="background2" src="anexos/imagens/back3.png">
-        
-        <!--LAYOUT-->
-        <div class='principal'>
-            <!--lado esquerdo-->
+<body>   
+
+    <!--LAYOUT-->
+    <main class='container'>
+        <div class="principal">
+            <!--PARTE 1 (ESQUERDA)-->
             <div class="parte1">
                 <img src="anexos/imagens/pic1.png">
             </div>
-            <!--lado direito-->
+    
+           <!--PARTE 2 (DIREITA)-->
             <div class="parte2">
                 <h1 class="titulo">Welcome!</h1>
                     <!--login-->
                     <div id="login">
-                        <input type="email" placeholder="Email ou telefone"> <br>
-                        <input id="senha1" type="password" placeholder="Senha"> <br>
-                        <input id="senha2" type="password" placeholder="Confirme sua senha">
-                        <div class="opcoes">
-                            <p id="erroSenha">Senha incorreta</p>
-                            <p id="acertoSenha">Senha correta</p>
-                        </div>
+                            <p>Email</p>
+                        <input type="email" placeholder="ex: aaa@gmail.com"> <br>
+                            <p>Senha</p>
+                        <input id="senha1" type="password" placeholder="ex: 123456"> <br>
+                            <p>Senha novamente</p>
+                        <input id="senha2" type="password" placeholder="ex: 123456">
+                            <div class="opcoes">
+                                <p id="erroSenha">Senha incorreta</p>
+                                <p id="acertoSenha">Senha correta</p>
+                            </div>
                     </div>
+
                     <!--endereço-->
                     <div id="enderecos">
                         <h3>Endereço</h3>
@@ -44,24 +46,26 @@
                         <input id="cidade" type="text" placeholder="Cidade">
                         <input id="uf" type="text" placeholder="UF"> 
                     </div>
+
                     <!--final-->
                     <div class='conectado'>
                         <input type="checkbox" name="manter-conectado" id="question">
                         <label>Eu li e concordo com os termos de uso</label>
                     </div>
+
                     <button id="botao">Sign up</button>
+
                     <div class="conta">
                         <p>Já tem conta?
-                        <a href="">Conecte-se</a>
-                    </p>
-                    <img class="back1" src="anexos/imagens/back1.png">
-                </div>
+                        <a href="/">Conecte-se</a>
+                        </p>
+                    </div>
             </div>
         </div>
-    </div>
+    </main>
     <!--COPYRIGHT-->
     <footer class="final">
-        <h6>Copyright 2022 TM Code - Todos os direitos reservados</h6>
+        <P>Copyright 2022 TM Code - Todos os direitos reservados</P>
     </footer>
     
 </body>
